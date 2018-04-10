@@ -1,0 +1,147 @@
+.clubs {
+	padding-top: 50px;
+	padding-bottom: 80px;
+
+	& .wrap {
+
+	}
+
+	&__list {
+		margin-top: 65px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+
+	&__card {
+		width: 100%;
+		max-width: 276px;
+		height: 335px;
+		text-align: center;
+		background: #fff center no-repeat/contain;
+		.trs(background, .35s, ease-out);
+
+		&:hover>.clubs__card-title {
+			color: #313131;
+		}
+
+		&:nth-child(1) {
+			background-image: url(../img/clubs__card-2.png);
+
+			&:hover {
+				background-image: url(../img/clubs__map-1.png);
+			}
+		}
+
+
+		&-title {
+			position: relative;
+			top: 13px;
+			display: inline-block;
+			font: 400 2.5rem/2.5rem @font-main;
+			text-transform: uppercase;
+			color: #707070;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -4px;
+				width: ~"calc(100% + 8px)";
+				height: 100%;
+				background-color: #fff;
+				z-index: -1;
+			}
+		}
+
+		&-border {
+			width: 250px;
+			height: 305px;
+			margin: auto;
+			border: 1px solid #bababa;
+		}
+
+		&-btn {
+			position: relative;
+			top: -20px;
+			width: 100%;
+			max-width: 175px;
+			text-transform: uppercase;
+			font-size: 1.6rem;
+		}
+	}
+
+	@media screen and (max-width: 620px) {
+		
+		&__card {
+			max-width: 248px;
+
+			&-title {
+				font-size: 2rem;
+			}
+
+			&-border {
+				width: 214px;
+			}
+		}
+
+	}
+
+		@media screen and (max-width: 540px) {
+
+			&__card {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 100%;
+				height: 100%;
+				background: none !important;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: #bababa;
+					transform: translateY(-50%);
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+
+				&-title {
+					top: 0;
+					font-size: 1.8rem;
+					line-height: 1.8rem;
+				}
+
+				&-border {
+					display: none;
+				}
+
+				&-btn {
+					top: 0;
+					max-width: 75px;
+					height: 25px;
+					padding: 0;
+					border-radius: 13px;
+					background-color: @green;
+					color: #fff;
+					font-size: 1.4rem;
+					line-height: 1.4rem;
+					letter-spacing: 0.7px;
+					border-color: @green;
+
+				}
+			}
+
+		}
+
+
+}
