@@ -1,2 +1,8 @@
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiJdfQ==
+$('.news__slider').slick({
+	slidesToScroll: 1,
+	slidesToShow: 1,
+	 centerMode: true,
+	variableWidth: true
+});
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiLCJuZXdzL25ld3MuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUNBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiIsIiQoJy5uZXdzX19zbGlkZXInKS5zbGljayh7XHJcblx0c2xpZGVzVG9TY3JvbGw6IDEsXHJcblx0c2xpZGVzVG9TaG93OiAxLFxyXG5cdCBjZW50ZXJNb2RlOiB0cnVlLFxyXG5cdHZhcmlhYmxlV2lkdGg6IHRydWVcclxufSk7Il19
