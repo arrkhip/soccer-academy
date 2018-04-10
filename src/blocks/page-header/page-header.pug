@@ -1,0 +1,36 @@
+mixin page-header()
+	+b.HEADER.page-header 
+		+e.wrap
+			+e.BUTTON.order.btn пробное занятие
+			+e.join 
+				+e.join-icon X
+				+e.SPAN.join-text вступить в академию
+			+e.A.logo
+				img(src="img/logo.png")
+			+e.toggle X
+			+e.A.tel(href="tel:+7(495) 774-338-0") +7(495) 774-338-0
+			+e.BUTTON.call-order
+				+e.call-order-icon X
+				+e.SPAN.call-order-text связаться с нами
+			+e.social
+				a(href="#" target="_blank") X
+				a(href="#" target="_blank") X
+				a(href="#" target="_blank") X
+			+e.NAV.nav
+				+e.UL.nav-list
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Философия
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Отделения
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Тренеры
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Соревнования
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Расписание и стоимость
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Контакты
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Интернет-магазин
+					+e.LI.nav-item
+						+e.BUTTON.order.btn пробное занятие
