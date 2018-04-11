@@ -1,0 +1,54 @@
+.enroll {
+	height: 355px;
+	background: url(../img/enroll-bg.png) no-repeat center/cover;
+
+	&__wrap {
+		height: 100%;
+		display: flex;
+	}
+
+	&__btn {
+		position: relative;
+		padding: 0;
+		margin: auto;
+		border: none;
+		border-bottom: 2px solid #fff;
+		font: 400 3rem/3rem @font-main;
+		text-transform: uppercase;
+		color: #fff;
+		background: none;
+		.trs();
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -27px;
+			bottom: -24px;
+			width: 34px;
+			height: 29px;
+			background: url(../img/enroll__icon.png);
+			.trs();
+		}
+
+		&:hover {
+			cursor: pointer;
+			border-bottom-color: transparent;
+		}
+
+		&:hover.enroll__btn::after {
+			opacity: 0;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 200px;
+
+		&__btn {
+			font-size: 2rem;
+			line-height: 2rem;
+			border-bottom-width: 1px;
+		}
+
+
+	}
+}
