@@ -1,0 +1,52 @@
+.album {
+	padding-top: 105px;
+	padding-bottom: 65px;
+	background: url(../img/album-bg.png) center top no-repeat/cover;
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	& .headline {
+		max-width: 321px;
+		margin-top: 75px;
+		text-align: left;
+
+		&__descr {
+			margin-top: 3px;
+			line-height: 4rem;
+		}
+	}
+
+	&__slider {
+
+	}
+
+	@media screen and (max-width: 992px) {
+
+		&__wrap {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		& .headline {
+			margin-top: 0;
+			margin-bottom: 50px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+
+		& .headline {
+			max-width: 180px;
+
+			&__descr {
+				margin-top: 8px;
+				line-height: 1.8rem;
+			}
+		}
+	}
+
+}
