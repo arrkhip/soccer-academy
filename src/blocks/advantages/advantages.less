@@ -1,0 +1,125 @@
+.advantages {
+	padding-bottom: 35px;
+	background: url(../img/advantages-bg.png) no-repeat center top/cover;
+
+
+	& .wrap {
+
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding-left: 25px;
+		margin-top: 100px;
+	}
+
+	&__card {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		width: 100%;
+		max-width: 300px;
+		height: 95px;
+		background-color: rgba(0, 0, 0, 0.1);
+
+		&:not(:nth-child(-n+3)) {
+			margin-top: 15px;
+		}
+
+		&:nth-child(3) .advantages__card-icon,
+		&:nth-child(8) .advantages__card-icon {
+			transform: translateX(-60%);
+		}
+
+		&-icon {
+			position: absolute;
+			width: 58px;
+			height: 58px;
+			fill: @green;
+			transform: translateX(-50%);
+		}
+
+		&-title {
+			width: 100%;
+			font: 400 1.6rem/2.6rem @font-main;
+			text-transform: uppercase;
+			letter-spacing: 1.2px;
+			color: #fff;
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		margin-left: auto;
+		margin-top: 55px;
+		border-color: #bf3636;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #bf3636;
+		letter-spacing: 0.8px;
+
+		&:hover {
+			background-color: @green;
+			border-color: @green;
+		}
+	}
+
+	@media screen and (max-width: 970px) {
+
+		&__list {
+			justify-content: space-around;
+		}
+
+		&__card:not(:nth-child(-n+2)) {
+			margin-top: 15px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+
+		&__list {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 55px;
+		}
+
+		&__card {
+			width: 250px;
+			height: 65px;
+
+			&:not(:nth-child(-n+3)) {
+				margin-top: 0;
+			}
+
+			&:not(:nth-child(1)) {
+				margin-top: 10px;
+			}
+
+			&:first-child .advantages__card-title br:first-child {
+				display: none;
+			}
+
+			&-icon {
+				width: 45px;
+				height: 45px;
+			}
+
+			&-title {
+				font-size: 1.3rem;
+				line-height: 1.8rem;
+			}
+		}
+
+		&__btn {
+			height: 30px;
+			margin-right: auto;
+			margin-top: 25px;
+		}
+
+	}
+}
