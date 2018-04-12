@@ -2,20 +2,32 @@ mixin page-header()
 	+b.HEADER.page-header 
 		+e.wrap
 			+e.BUTTON.order.btn пробное занятие
-			+e.join 
-				+e.join-icon X
+			+e.BUTTON.join 
+				+e.SVG.join-icon 
+					use(xlink:href="img/sprite.svg#add")
 				+e.SPAN.join-text вступить в академию
 			+e.A.logo
 				img(src="img/logo.png")
-			+e.toggle X
+			+e.toggle
+				svg
+					use(xlink:href="img/sprite.svg#menu")
+				svg
+					use(xlink:href="img/sprite.svg#close")
 			+e.A.tel(href="tel:+7(495) 774-338-0") +7(495) 774-338-0
 			+e.BUTTON.call-order
-				+e.call-order-icon X
+				+e.SVG.call-order-icon 
+					use(xlink:href="img/sprite.svg#phone-call")
 				+e.SPAN.call-order-text связаться с нами
 			+e.social
-				a(href="#" target="_blank") X
-				a(href="#" target="_blank") X
-				a(href="#" target="_blank") X
+				a(href="#" target="_blank")
+					svg
+						use(xlink:href="img/sprite.svg#twitter")
+				a(href="#" target="_blank")
+					svg
+						use(xlink:href="img/sprite.svg#facebook")
+				a(href="#" target="_blank")
+					svg
+						use(xlink:href="img/sprite.svg#instagram")
 			+e.NAV.nav
 				+e.UL.nav-list
 					+e.LI.nav-item
@@ -33,4 +45,4 @@ mixin page-header()
 					+e.LI.nav-item
 						+e.A.nav-link(href="#") Интернет-магазин
 					+e.LI.nav-item
-						+e.BUTTON.order.btn пробное занятие
+						+e.BUTTON.nav-btn.btn пробное занятие
