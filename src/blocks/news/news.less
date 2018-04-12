@@ -1,6 +1,7 @@
 .news {
 	padding-top: 90px;
 	padding-bottom: 145px;
+	background: url(../img/news-bg.png) no-repeat center bottom / cover;
 
 
 	&__wrap {
@@ -9,7 +10,7 @@
 	}
 
 	&__slider {
-		padding: 50px 0;
+		padding-top: 50px;
 
 		&-arrow {
 			position: absolute;
@@ -71,6 +72,7 @@
 		&-img {
 			max-width: 50%;
 			width: 100%;
+			overflow: hidden;
 		}
 
 		&-info {
@@ -121,6 +123,10 @@
 	}
 
 	@media screen and (max-width: 900px) {
+		padding-top: 60px;
+		padding-bottom: 80px;
+		background-size: 100% 70%;
+		background-position: center top;
 
 		&__slider {
 
@@ -151,21 +157,25 @@
 			}
 
 			&-info {
-				background-position: bottom 85px right 60px;
+				padding-bottom: 25px;
+				background-position: bottom 50px right 25px;
 			}
 		}
 	}
 
 	@media screen and (max-width: 540px) {
+		padding-top: 25px;
+		padding-bottom: 20px;
 
 		&__wrap {
 			max-width: 320px;
 		}
 
 		&__slider {
+			padding-top: 30px;
 
 			&-arrow {
-				top: 50px;
+				top: 30px;
 				width: 30px;
 				height: 225px;
 
