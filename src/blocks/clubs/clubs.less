@@ -2,8 +2,8 @@
 	padding-top: 50px;
 	padding-bottom: 80px;
 
-	& .wrap {
-
+	&__wrap {
+		max-width: 822px;
 	}
 
 	&__list {
@@ -11,16 +11,19 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
 	}
 
 	&__card {
 		width: 100%;
-		max-width: 276px;
+		max-width: 264px;
 		height: 335px;
 		text-align: center;
 		background: #fff center no-repeat/contain;
 		.trs(background, .35s, ease-out);
+
+		&:not(:nth-child(-n+3)) {
+			margin-top: 30px;
+		}
 
 		&:hover>.clubs__card-title {
 			color: #313131;
@@ -31,6 +34,47 @@
 
 			&:hover {
 				background-image: url(../img/clubs__map-1.png);
+			}
+		}
+
+		&:nth-child(2) {
+			background-image: url(../img/clubs__card-2.png);
+
+			&:hover {
+				background-image: url(../img/clubs__map-2.png);
+			}
+		}
+
+		&:nth-child(3) {
+			opacity: .8;
+			background-image: url(../img/clubs__card-3.png);
+
+			&:hover {
+				background-image: url(../img/clubs__map-2.png);
+			}
+		}
+
+		&:nth-child(4) {
+			background-image: url(../img/clubs__card-4.png);
+
+			&:hover {
+				background-image: url(../img/clubs__map-4.png);
+			}
+		}
+
+		&:nth-child(5) {
+			background-image: url(../img/clubs__card-5.png);
+
+			&:hover {
+				background-image: url(../img/clubs__map-5.png);
+			}
+		}
+
+		&:nth-child(6) {
+			background-image: url(../img/clubs__card-6.png);
+
+			&:hover {
+				background-image: url(../img/clubs__map-6.png);
 			}
 		}
 
@@ -73,8 +117,21 @@
 		}
 	}
 
+	@media screen and (max-width: 840px) {
+		padding-top: 0;
+
+		&__list {
+			margin-top: 35px;
+			justify-content: space-around;
+		}
+
+		&__card:not(:nth-child(-n+2)) {
+			margin-top: 30px;
+		}
+	}
+
 	@media screen and (max-width: 620px) {
-		
+
 		&__card {
 			max-width: 248px;
 
@@ -86,62 +143,59 @@
 				width: 214px;
 			}
 		}
-
 	}
 
-		@media screen and (max-width: 540px) {
+	@media screen and (max-width: 540px) {
+		padding-top: 15px;
+		padding-bottom: 50px;
 
-			&__card {
-				position: relative;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				max-width: 100%;
-				height: 100%;
-				background: none !important;
+		&__card {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 100%;
+			height: 100%;
+			background: none !important;
 
-				&::before {
-					content: '';
-					position: absolute;
-					top: 50%;
-					left: 0;
-					width: 100%;
-					height: 1px;
-					background-color: #bababa;
-					transform: translateY(-50%);
-				}
-
-				&:not(:last-child) {
-					margin-bottom: 12px;
-				}
-
-				&-title {
-					top: 0;
-					font-size: 1.8rem;
-					line-height: 1.8rem;
-				}
-
-				&-border {
-					display: none;
-				}
-
-				&-btn {
-					top: 0;
-					max-width: 75px;
-					height: 25px;
-					padding: 0;
-					border-radius: 13px;
-					background-color: @green;
-					color: #fff;
-					font-size: 1.4rem;
-					line-height: 1.4rem;
-					letter-spacing: 0.7px;
-					border-color: @green;
-
-				}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #bababa;
+				transform: translateY(-50%);
 			}
 
+			&:not(:nth-child(-n+1)) {
+				margin-top: 12px;
+			}
+
+			&-title {
+				top: 0;
+				font-size: 1.8rem;
+				line-height: 1.8rem;
+			}
+
+			&-border {
+				display: none;
+			}
+
+			&-btn {
+				top: 0;
+				max-width: 75px;
+				height: 25px;
+				padding: 0;
+				border-radius: 13px;
+				background-color: @green;
+				color: #fff;
+				font-size: 1.4rem;
+				line-height: 1.4rem;
+				letter-spacing: 0.7px;
+				border-color: @green;
+			}
 		}
-
-
+	}
 }
