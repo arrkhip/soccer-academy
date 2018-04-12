@@ -7,6 +7,12 @@
 		height: 100%;
 	}
 
+	&__name {
+		position: absolute;
+		top: 115px;
+		right: -28px;
+	}
+
 	&__signature {
 		position: absolute;
 		bottom: 80px;
@@ -21,6 +27,50 @@
 
 		& img {
 			float: right;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		height: 650px;
+
+		&__name {
+			position: absolute;
+			top: 80px;
+			right: 20px;
+		}
+
+		&__signature {
+			position: absolute;
+			bottom: 80px;
+			right: 20px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 455px;
+		background: url(../img/home-screen-bg--xs.png) center bottom no-repeat/cover;
+		
+		&__name {
+			width: 280px;
+			top: 75px;
+			right: 50%;
+			transform: translateX(50%);
+		}
+
+		&__signature {
+			bottom: 40px;
+			right: 10px;
+
+			p {
+				font-size: 1.6rem;
+				line-height: 1.2rem;
+				letter-spacing: 1px;
+			}
+
+			img {
+				width: 57px;
+				height: 33px;
+			}
 		}
 	}
 }

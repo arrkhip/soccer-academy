@@ -54,6 +54,9 @@
     </header>
     <div class="home-screen">
       <div class="home-screen__wrap">
+        <picture class="home-screen__name">
+          <source srcset="img/home-screen__name--xs.png" media="(max-width: 768px)"/><img srcset="img/home-screen__name.png"/>
+        </picture>
         <div class="home-screen__signature">
           <p>Я с нетерпением жду Вас <br> &#8194;на наших тренировках!</p><img src="img/home-screen__signature.png"/>
         </div>
@@ -272,6 +275,27 @@
         </button>
       </div>
     </section>
+    <div class="page-footer"> 
+      <div class="page-footer__wrap"><img class="page-footer__logo" src="img/logo.png" alt="" role="presentation"/>
+        <div class="page-footer__text">Мы в соц сетях
+        </div>
+        <button class="page-footer__btn btn">Записаться в Академию
+        </button>
+        <button class="page-footer__up">A
+        </button><a class="page-footer__tel" href="tel:+7 (495) 774-33-80">+7 (495) 774-33-80</a>
+        <div class="page-footer__social">
+          <svg>
+            <use href="img/sprite.svg#twitter"></use>
+          </svg>
+          <svg>
+            <use href="img/sprite.svg#facebook"></use>
+          </svg>
+          <svg>
+            <use href="img/sprite.svg#instagram"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
   </body>

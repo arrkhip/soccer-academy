@@ -1,0 +1,15 @@
+mixin page-footer()
+	+b.page-footer 
+		+e.wrap
+			+e.IMG.logo(src="img/logo.png")
+			+e.text Мы в соц сетях
+			+e.BUTTON.btn.btn Записаться в Академию
+			+e.BUTTON.up A
+			+e.A.tel(href="tel:+7 (495) 774-33-80") +7 (495) 774-33-80
+			+e.social
+				svg
+					use(href="img/sprite.svg#twitter")
+				svg
+					use(href="img/sprite.svg#facebook")
+				svg
+					use(href="img/sprite.svg#instagram")

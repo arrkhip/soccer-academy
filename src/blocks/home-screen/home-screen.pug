@@ -1,6 +1,9 @@
 mixin home-screen()
 	+b.home-screen
 		+e.wrap
+			+e.PICTURE.name
+				source(srcset="img/home-screen__name--xs.png"  media="(max-width: 768px)")
+				img(srcset="img/home-screen__name.png")
 			+e.signature
 				p Я с нетерпением жду Вас <br> &#8194;на наших тренировках!
 				img(src="img/home-screen__signature.png")

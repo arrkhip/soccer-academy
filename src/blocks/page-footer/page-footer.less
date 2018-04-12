@@ -1,0 +1,81 @@
+.page-footer {
+	display: none;
+
+	position: relative;
+	height: 145px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 51px;
+		background-color: #313131;
+	}
+
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		height: 100%;
+		z-index: 1;
+	}
+
+	&__logo {
+		margin-right: ~"calc(100% - 305px)";
+
+
+	}
+
+	&__text {
+		font: 400 3rem/3rem @font-main;
+		text-transform: uppercase;
+		color: #000;
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 175px;
+		height: 25px;
+		padding: 0;
+		margin-left: 160px;
+		margin-right: 217px;
+		border-color: rgba(255, 255, 255, 0.5);
+		font-size: 1.2rem;
+		font-family: @font-second;
+		color: rgba(255, 255, 255, 0.5);
+		background-color: transparent;
+	}
+
+	&__up {
+		margin-right: 260px;
+
+	}
+
+	&__tel {
+		margin-right: 35px;
+	}
+
+	&__social {
+
+		& svg {
+			width: 15px;
+			height: 15px;
+			fill: rgba(255, 255, 255, 0.45);
+			.trs();
+
+			&:not(:first-child) {
+				margin-left: 13px;
+			}
+
+			&:hover {
+				cursor: pointer;
+				fill: #fff;
+			}
+		}
+	}
+
+}
