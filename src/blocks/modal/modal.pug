@@ -1,0 +1,11 @@
+mixin modal()
+	+b.modal
+		+e.FORM.inner 
+			+e.SVG.close
+				use(xlink:href="img/sprite.svg#close")
+			+e.title Хотите записаться в академию? <span>Начните сейчас</span>
+			+e.INPUT.input(type="text" placeholder="Ваше имя")
+			+e.INPUT.input(type="text" placeholder="Email")
+			+e.BUTTON.btn.btn отправить
+			+e.P.descr Отправляя данные вашего номера телефона или Адреса электронной почты, Вы автоматически даете Согласие на обработку персональных данных и Отправку информационно-рекламных сообщений.
+

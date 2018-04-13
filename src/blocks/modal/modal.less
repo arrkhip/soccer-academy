@@ -1,0 +1,167 @@
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+
+	&__inner  {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 80px 20px 0;
+		width: 100%;
+		max-width: 644px;
+		margin: auto;
+		border: 1px solid #fff;
+		text-align: center;
+		background-color: #313131;
+		overflow: hidden;
+	}
+
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+		fill: #fff;
+		.trs();
+
+		&:hover {
+			opacity: .6;
+			cursor: pointer;
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+		font: 400 3rem/3rem @font-main;
+		text-transform: uppercase;
+		color: #fff;
+
+		& span {
+			display: inline-block;
+			margin-top: 20px;
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		max-width: 450px;
+		height: 40px;
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, .55);
+		text-align: center;
+		line-height: 40px;
+		color: #fff;
+		background-color: transparent;
+
+		&:focus {
+			border-color: #fff;
+		}
+
+		& + & {
+			margin-top: 30px;
+		}
+	}
+
+	&__btn {
+		max-width: 175px;
+		width: 100%;
+		margin-top: 40px;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		color: #fff;
+		background-color: #bf3636;
+		border-color: #bf3636;
+
+		&:hover {
+			background-color: @green;
+		}
+	}
+
+	&__descr {
+		width: 100%;
+		max-width: 510px;
+		padding: 22px 0;
+		margin: auto;
+		font: 400 1rem/1.2rem @font-main;
+		letter-spacing: 0.6px;
+		color: #fff;
+		position: relative;	
+		z-index: 1;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			left: -25%;
+			bottom: 0;
+			height: 70px;
+			width: 150%;
+			background-color: #5a5a5a;
+			z-index: -1;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+
+		&__inner {
+			max-width: 280px;
+			padding-top: 30px;
+		}
+
+		&__close {
+			top: 10px;
+			right: 10px;
+			width: 10px;
+			height: 10px;
+		}
+
+		&__title {
+			font-size: 2.2rem;
+			line-height: 2.6rem;
+			margin-bottom: 45px;
+			text-align: center;
+
+			& span {
+				margin-top: 10px;
+				font-size: 1.4rem;
+				line-height: 1.4rem;
+				text-align: center;
+			}
+		}
+
+		&__input {
+			height: 30px;
+			border-radius: 15px;
+
+			& + & {
+				margin-top: 20px;
+			}
+		}
+
+		&__btn {
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 0;
+			z-index: 2;
+		}
+
+		&__descr {
+			margin-top: -15px;
+			padding: 24px 0;
+
+			&::before {
+				height: 110px;
+			}
+		}
+	}
+}

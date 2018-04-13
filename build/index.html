@@ -16,7 +16,7 @@
       <div class="page-header__wrap">
         <button class="page-header__order btn">пробное занятие
         </button>
-        <button class="page-header__join"> 
+        <button class="page-header__join show-modal">
           <svg class="page-header__join-icon"> 
             <use xlink:href="img/sprite.svg#add"></use>
           </svg><span class="page-header__join-text">вступить в академию</span>
@@ -99,7 +99,7 @@
                   <p>До встречи на наших тренировках!</p>
                   <p>Спортивный директор <br> ШФМ «Академия Спорта» <br> Клаудио Рифелли.</p>
                 </div>
-                <button class="news__slide-btn btn">Записаться
+                <button class="news__slide-btn btn show-modal">Записаться
                 </button>
               </div>
             </div>
@@ -115,7 +115,7 @@
                   <p>До встречи на наших тренировках!</p>
                   <p>Спортивный директор <br> ШФМ «Академия Спорта» <br> Клаудио Рифелли.</p>
                 </div>
-                <button class="news__slide-btn btn">Записаться
+                <button class="news__slide-btn btn show-modal">Записаться
                 </button>
               </div>
             </div>
@@ -434,7 +434,7 @@
     </section>
     <section class="enroll">
       <div class="enroll__wrap">
-        <button class="enroll__btn">Записаться в академию
+        <button class="enroll__btn show-modal">Записаться в академию
         </button>
       </div>
     </section>
@@ -442,7 +442,7 @@
       <div class="page-footer__wrap"><img class="page-footer__logo" src="img/logo.png" alt="" role="presentation"/>
         <div class="page-footer__text">Мы в соц сетях
         </div>
-        <button class="page-footer__btn btn">Записаться в Академию
+        <button class="page-footer__btn btn show-modal">Записаться в Академию
         </button>
         <button class="page-footer__up">
         </button><a class="page-footer__tel" href="tel:+7 (495) 774-33-80">+7 (495) 774-33-80</a>
@@ -458,6 +458,19 @@
           </svg>
         </div>
       </div>
+    </div>
+    <div class="modal">
+      <form class="modal__inner"> 
+        <svg class="modal__close">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+        <div class="modal__title">Хотите записаться в академию? <span>Начните сейчас</span>
+        </div><input class="modal__input" type="text" placeholder="Ваше имя"/><input class="modal__input" type="text" placeholder="Email"/>
+        <button class="modal__btn btn">отправить
+        </button>
+        <p class="modal__descr">Отправляя данные вашего номера телефона или Адреса электронной почты, Вы автоматически даете Согласие на обработку персональных данных и Отправку информационно-рекламных сообщений.
+        </p>
+      </form>
     </div>
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
