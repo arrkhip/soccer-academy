@@ -1,23 +1,26 @@
 $('.publications__slider').slick({
-  infinite: false,
+ infinite: false,
+ dots: false,
+  speed: 300,
   slidesToShow: 4,
-  variableWidth: true,
+  slidesToScroll: 1,
+  prevArrow: '<button class="publications__arrow publications__arrow--prev"><</button>',
+  nextArrow: '<button class="publications__arrow publications__arrow--next">></button>',
 
   responsive: [
     {
       breakpoint: 1150,
       settings: {
-      	infinite: false,
+        dots: false,
         slidesToShow: 3,
-        variableWidth: true,
         slidesToScroll: 1
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll:1
       }
     },
     {
@@ -27,6 +30,5 @@ $('.publications__slider').slick({
         slidesToScroll: 1
       }
     }
-
   ]
 });

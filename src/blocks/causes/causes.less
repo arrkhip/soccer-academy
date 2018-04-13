@@ -18,6 +18,35 @@
 
 	&__slider {
 		display: none;
+
+		&-arrow {
+			position: absolute;
+			top: 125px;
+			width: 30px;
+			height: 30px;
+			border: none;
+			border-radius: 50%;
+			padding: 0;
+			text-align: center;
+			font: 400 3.2rem/3rem @font-main;
+			background-color: #c1c1c1;
+			color: #fff;
+			z-index: 1;
+			.trs();
+
+			&:hover {
+				background-color: @green;
+				cursor: pointer;
+			}
+
+			&--prev {
+				left: -10px;
+			}
+
+			&--next {
+				right: -10px;
+			}
+		}
 	}
 
 	&__card {
@@ -26,9 +55,9 @@
 		height: 355px;
 		padding: 20px;
 
-&:not(:nth-child(-n+3)) {
-	margin-top: 35px;
-}
+		&:not(:nth-child(-n+3)) {
+			margin-top: 35px;
+		}
 		&-banner {
 			position: absolute;
 			top: 0;
@@ -91,16 +120,16 @@
 		}
 	}
 
-		@media screen and (max-width: 1110px) {
+	@media screen and (max-width: 1110px) {
 
-			&__list {
-				justify-content: space-around;
-			}
-
-			&__card:not(:nth-child(-n+2)) {
-				margin-top: 30px;
-			}
+		&__list {
+			justify-content: space-around;
 		}
+
+		&__card:not(:nth-child(-n+2)) {
+			margin-top: 30px;
+		}
+	}
 
 	@media screen and (max-width: 768px) {
 
