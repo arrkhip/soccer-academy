@@ -1,0 +1,15 @@
+extends ../layout/layoutBase.pug
+
+block content
+
+	+b.main-page 
+		+e.wrap
+			+e.box
+				+e.A.btn(href="index.html") Побежали
+				+e.A.btn(href="#") Покатили
+			+e.box
+				+e.descr школа фигурного катания
+				+e.descr школа футбольного мастерства
+
+			+e.name 
+				img(src="img/main-page__name.png")

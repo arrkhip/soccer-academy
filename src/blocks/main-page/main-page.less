@@ -1,0 +1,154 @@
+.main-page {
+	position: relative;
+	height: 100vh;
+	background: url(../img/main-page.png) center top no-repeat / cover;
+
+	&__wrap {
+		width: 100%;
+		height: 100%;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			opacity: .9;
+			height: 100%;
+			width: 50%;
+			opacity: 0;
+		}
+
+		&::before {
+			left: 0;
+			background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 100%);
+		}
+
+		&::after {
+			right: 0;
+			background-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0) 100%);
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		font: 400 2.4rem/2.4rem 'New_Zelek', sans-serif;
+		text-transform: uppercase;
+		color: #000;
+		text-shadow: 0.8px 0.6px 1px #fff;
+		z-index: 1;
+
+		&:first-child {
+			width: 329px;
+			height: 119px;
+			bottom: 30px;
+			left: 150px;
+			background: url(../img/main-page__btn-1.png) center no-repeat;
+
+
+			&:hover.main-page__wrap::before {
+				opacity: 1;
+			}
+
+		}
+
+		&:last-child {
+			bottom: 60px;
+			right: 150px;
+			width: 264px;
+			height: 54px;
+			background: url(../img/main-page__btn-2.png) center no-repeat;
+		}
+	}
+
+	&__descr,
+	&__name {
+		display: none;
+	}
+
+	@media screen and (max-width: 992px) {
+
+		&__btn {
+
+			&:first-child {
+				left: 50px;
+			}
+
+			&:last-child {
+				right: 50px;
+			}
+		}
+	}
+
+
+	@media screen and (max-width: 768px) {
+
+		&__btn {
+			font-size: 1.7rem;
+			line-height: 1.7rem;
+
+			&:first-child {
+				width: 204px;
+				height: 69px;
+				background-size: cover;
+			}
+
+			&:last-child {
+				bottom: 40px;
+				width: 165px;
+				height: 50px;
+				background-size: contain;
+			}
+		}
+	}
+
+	@media screen and (max-width: 540px) {
+		background: url(../img/main-page--xs.png) no-repeat center center / cover;
+		
+		&__btn {
+
+			&:first-child {
+				left: ~"calc(50% - 102px)";
+				bottom: 5%;
+			}
+
+			&:last-child {
+				top: 30%;
+				left: ~"calc(50% - 82px)";
+				bottom: auto;
+			}
+		}
+
+		&__descr {
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 25px;
+			font: 400 1.4rem/2.5rem @font-main;
+			text-transform: uppercase;
+			text-align: center;
+			background-color: #fff;
+
+			&:first-child {
+				top: 0;
+				color: #004476;
+			}
+
+			&:last-child {
+				bottom: 0;
+				color: #681401;
+			}
+		}
+
+		&__name {
+			display: block;
+			position: absolute;
+			top: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
